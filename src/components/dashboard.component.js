@@ -4,7 +4,7 @@ export default class Dashboard extends Component{
     render(){
         return(
             <div>
-                <p>YELP DASHBOARD</p>
+                <p>THIS IS THE YELP DASHBOARD</p>
             </div>
         )
     }
