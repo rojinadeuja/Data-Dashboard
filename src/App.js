@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Route, Link} from "react-router-dom"; //Import 
 
 import logo from "./yelp_logo.png"; //Import yelp logo
 
-import Dashboard from "./components/dashboard.component"; //Import the dashboard component
-import Business from './components/business.component'; //Import the business component
+import Dashboard from "./components/Dashboard.component"; //Import the dashboard component
+import Business from './components/Business.component'; //Import the business component
 
 
 class App extends React.Component{

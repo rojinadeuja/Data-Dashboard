@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BarChart from './barChart'
+import BarChart from './BarChart'
 
 // import * as d3 from 'd3';
 export default class Dashboard extends Component{

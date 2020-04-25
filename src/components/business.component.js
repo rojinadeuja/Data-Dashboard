@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
-
+import RowChart from './RowChart';
 export default class Business extends Component{
     render(){
         return(
-            <div>
-                <p>BUSINESSES ON YELP</p>
-            </div>
+            <div className='App'>
+             <h2>BUSINESSES WITH MOST REVIEWS</h2>
+             <br/>
+             <RowChart />
+             </div>
         )
     }
 }
