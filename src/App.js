@@ -25,7 +25,7 @@ class App extends React.Component{
                 <Link to="/" className="nav-link">Yelp Data Dashboard</Link>
               </li>
               <li className="navbar-item">
-                <Link to="/business" className="nav-link">Businesses</Link>
+                <Link to="/businesses" className="nav-link">Businesses</Link>
               </li>
             </ul>
             </div>
