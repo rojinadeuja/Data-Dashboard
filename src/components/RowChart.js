@@ -5,8 +5,19 @@ class RowChart extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [{skill: "B1", value: 80},{skill: "B2", value: 70},{skill: "B3", value: 85},{skill: "B4", value: 90},{skill: "B5", value: 75},{skill: "B6", value: 70},{skill: "B7", value: 65},{ skill: "B8", value: 65},{skill: "B9", value: 70},{skill: "B10", value: 65}],
-            // Set Chart Properties:
+            data: [
+                    {skill: "B1", value: 80},
+                    {skill: "B2", value: 70},
+                    {skill: "B3", value: 85},
+                    {skill: "B4", value: 90},
+                    {skill: "B5", value: 75},
+                    {skill: "B6", value: 70},
+                    {skill: "B7", value: 65},
+                    { skill: "B8", value: 65},
+                    {skill: "B9", value: 70},
+                    {skill: "B10", value: 65}
+                ],
+            // Set Chart Properties
             yAxisAttribute: "skill",
             xAxisAttribute: "value", 
             width: 1000, // Width of the chart
@@ -16,14 +27,19 @@ class RowChart extends React.Component {
         this.drawChart = this.drawChart.bind(this); // Bind the method to the constructor
     }
     componentDidMount() {
-    /* Function is called once the DOM is mounted in the browser */
+            /* Function is called once the DOM is mounted in the browser */
         this.drawChart(); // Call drawChart() method
     }
+    componentDidUpdate() {
+            /* Function is called everytime the DOM is updated */
+        this.drawChart()
+     }
     drawChart() {
+        // Define margins for the chart to render in the page
         let margin = {top: 20, right: 30, bottom: 40, left: 90},
                     width = this.state.width - margin.left - margin.right,
                     height = this.state.height - margin.top - margin.bottom;
-        // append the svg object to the body of the page
+        // Append the svg object to the div element of the page with .rowChart class which is rendered
         let svg = d3.select(".rowChart")
                 .append("svg")
                 .attr("width", width + margin.left + margin.right)
@@ -72,7 +88,7 @@ class RowChart extends React.Component {
                 .attr("width", (d) => x(d[this.state.xAxisAttribute]))
         }
         render() {
-            return <div class='rowChart' ref={this.chartRef}></div>;
+            return <div class='rowChart' ref={this.chartRef}></div>; // Render the rowChart class along with the ref
             }
 }
 export default RowChart
