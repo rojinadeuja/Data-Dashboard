@@ -1,0 +1,416 @@
+[
+    {
+        "_id": "5ea5a5131712d5a34daf4f0f",
+        "topic": "Fine Dining",
+        "details": [
+            {
+                "word": "highly_recommend",
+                "frequency": 0.0098306555300951
+            },
+            {
+                "word": "wine",
+                "frequency": 0.008897109888494015
+            },
+            {
+                "word": "dining_room",
+                "frequency": 0.007918075658380985
+            },
+            {
+                "word": "room",
+                "frequency": 0.007721535861492157
+            },
+            {
+                "word": "dining",
+                "frequency": 0.006956200581043959
+            },
+            {
+                "word": "gluten_free",
+                "frequency": 0.006896488834172487
+            },
+            {
+                "word": "dessert",
+                "frequency": 0.006827508099377155
+            },
+            {
+                "word": "steak",
+                "frequency": 0.006111700553447008
+            },
+            {
+                "word": "chef",
+                "frequency": 0.00518034677952528
+            },
+            {
+                "word": "reservation",
+                "frequency": 0.004735248629003763
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f10",
+        "topic": "Thai Food",
+        "details": [
+            {
+                "word": "soup",
+                "frequency": 0.016208305954933167
+            },
+            {
+                "word": "noodle",
+                "frequency": 0.01587836816906929
+            },
+            {
+                "word": "pork",
+                "frequency": 0.012834317050874233
+            },
+            {
+                "word": "shrimp",
+                "frequency": 0.009289429523050785
+            },
+            {
+                "word": "thai",
+                "frequency": 0.008737646043300629
+            },
+            {
+                "word": "mashed_potato",
+                "frequency": 0.0059832241386175156
+            },
+            {
+                "word": "broth",
+                "frequency": 0.005521675106137991
+            },
+            {
+                "word": "pork_belly",
+                "frequency": 0.005232029594480991
+            },
+            {
+                "word": "plate",
+                "frequency": 0.004910123068839312
+            },
+            {
+                "word": "cooked",
+                "frequency": 0.004877251572906971
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f11",
+        "topic": "Italian Food",
+        "details": [
+            {
+                "word": "pizza",
+                "frequency": 0.06206636503338814
+            },
+            {
+                "word": "wing",
+                "frequency": 0.012293812818825245
+            },
+            {
+                "word": "crust",
+                "frequency": 0.011535550467669964
+            },
+            {
+                "word": "italian",
+                "frequency": 0.00812317430973053
+            },
+            {
+                "word": "pasta",
+                "frequency": 0.007587635889649391
+            },
+            {
+                "word": "topping",
+                "frequency": 0.007404544856399298
+            },
+            {
+                "word": "slice",
+                "frequency": 0.007172900717705488
+            },
+            {
+                "word": "garlic",
+                "frequency": 0.007142220623791218
+            },
+            {
+                "word": "deep_fried",
+                "frequency": 0.006670638918876648
+            },
+            {
+                "word": "lobster",
+                "frequency": 0.0061288210563361645
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f12",
+        "topic": "Bakery",
+        "details": [
+            {
+                "word": "coffee",
+                "frequency": 0.014335337094962597
+            },
+            {
+                "word": "cream",
+                "frequency": 0.011278263293206692
+            },
+            {
+                "word": "spring_roll",
+                "frequency": 0.008313992992043495
+            },
+            {
+                "word": "cake",
+                "frequency": 0.008106645196676254
+            },
+            {
+                "word": "chocolate",
+                "frequency": 0.007823743857443333
+            },
+            {
+                "word": "dessert",
+                "frequency": 0.006516699213534594
+            },
+            {
+                "word": "milk",
+                "frequency": 0.006091925781220198
+            },
+            {
+                "word": "cafe",
+                "frequency": 0.005699899513274431
+            },
+            {
+                "word": "shop",
+                "frequency": 0.005196010693907738
+            },
+            {
+                "word": "vegan",
+                "frequency": 0.005112075712531805
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f13",
+        "topic": "Asian Food",
+        "details": [
+            {
+                "word": "sushi",
+                "frequency": 0.018289178609848022
+            },
+            {
+                "word": "roll",
+                "frequency": 0.01234504021704197
+            },
+            {
+                "word": "bowl",
+                "frequency": 0.01113036647439003
+            },
+            {
+                "word": "spicy",
+                "frequency": 0.00886949896812439
+            },
+            {
+                "word": "ramen",
+                "frequency": 0.006653560791164637
+            },
+            {
+                "word": "fish",
+                "frequency": 0.006072694435715675
+            },
+            {
+                "word": "soup",
+                "frequency": 0.0056739686988294125
+            },
+            {
+                "word": "buffet",
+                "frequency": 0.004649899434298277
+            },
+            {
+                "word": "flavour",
+                "frequency": 0.004491702653467655
+            },
+            {
+                "word": "korean",
+                "frequency": 0.004305727314203978
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f14",
+        "topic": "Mexican Food",
+        "details": [
+            {
+                "word": "taco",
+                "frequency": 0.1169409230351448
+            },
+            {
+                "word": "salsa",
+                "frequency": 0.055177535861730576
+            },
+            {
+                "word": "burrito",
+                "frequency": 0.05423326417803764
+            },
+            {
+                "word": "mexican",
+                "frequency": 0.053005676716566086
+            },
+            {
+                "word": "tortilla",
+                "frequency": 0.05069584399461746
+            },
+            {
+                "word": "wife",
+                "frequency": 0.04643082991242409
+            },
+            {
+                "word": "saturday",
+                "frequency": 0.04608054459095001
+            },
+            {
+                "word": "chip",
+                "frequency": 0.007213779725134373
+            },
+            {
+                "word": "bean",
+                "frequency": 0.007170823868364096
+            },
+            {
+                "word": "carne_asada",
+                "frequency": 0.0069867270067334175
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f15",
+        "topic": "Customer Experience",
+        "details": [
+            {
+                "word": "told",
+                "frequency": 0.008061948232352734
+            },
+            {
+                "word": "manager",
+                "frequency": 0.005560002755373716
+            },
+            {
+                "word": "waitress",
+                "frequency": 0.004892735742032528
+            },
+            {
+                "word": "left",
+                "frequency": 0.004590238910168409
+            },
+            {
+                "word": "business",
+                "frequency": 0.004069700371474028
+            },
+            {
+                "word": "waiting",
+                "frequency": 0.003994686994701624
+            },
+            {
+                "word": "owner",
+                "frequency": 0.003983861766755581
+            },
+            {
+                "word": "walked",
+                "frequency": 0.003867383813485503
+            },
+            {
+                "word": "away",
+                "frequency": 0.003815900767222047
+            },
+            {
+                "word": "looked",
+                "frequency": 0.0035810209810733795
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f16",
+        "topic": "Fast Food",
+        "details": [
+            {
+                "word": "burger",
+                "frequency": 0.03395279496908188
+            },
+            {
+                "word": "breakfast",
+                "frequency": 0.017506537958979607
+            },
+            {
+                "word": "bacon",
+                "frequency": 0.01232281792908907
+            },
+            {
+                "word": "egg",
+                "frequency": 0.010623151436448097
+            },
+            {
+                "word": "drive_thru",
+                "frequency": 0.009920359589159489
+            },
+            {
+                "word": "sandwich",
+                "frequency": 0.009322822093963623
+            },
+            {
+                "word": "brunch",
+                "frequency": 0.008292408660054207
+            },
+            {
+                "word": "onion",
+                "frequency": 0.007970032282173634
+            },
+            {
+                "word": "toast",
+                "frequency": 0.0074927653186023235
+            },
+            {
+                "word": "onion_ring",
+                "frequency": 0.007489835377782583
+            }
+        ]
+    },
+    {
+        "_id": "5ea5a5131712d5a34daf4f17",
+        "topic": "Happy Hour",
+        "details": [
+            {
+                "word": "happy_hour",
+                "frequency": 0.01729334518313408
+            },
+            {
+                "word": "beer",
+                "frequency": 0.013012278825044632
+            },
+            {
+                "word": "sandwich",
+                "frequency": 0.010466543957591057
+            },
+            {
+                "word": "game",
+                "frequency": 0.004902163054794073
+            },
+            {
+                "word": "local",
+                "frequency": 0.0037558102048933506
+            },
+            {
+                "word": "year",
+                "frequency": 0.0035722078755497932
+            },
+            {
+                "word": "pulled_pork",
+                "frequency": 0.0034566549584269524
+            },
+            {
+                "word": "five_star",
+                "frequency": 0.0034123999066650867
+            },
+            {
+                "word": "open",
+                "frequency": 0.00312118255533278
+            },
+            {
+                "word": "music",
+                "frequency": 0.002922934480011463
+            }
+        ]
+    }
+]
