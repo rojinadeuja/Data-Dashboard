@@ -1,37 +1,35 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-// const cors = require('cors');
-const MongoClient = require('mongodb').MongoClient;
-const url ='mongodb://127.0.0.1:27017';
-const dbName = 'yelp_database'
+const cors = require('cors');
+const mongoose = require('mongoose');
+const topicRoutes = express.Router();
 
-MongoClient.connect(url, { useNewUrlParser: true }).then( client =>{
-    const db = client.db(dbName)
-    console.log(`Connected MongoDB: ${url}`)
-    console.log(`Database: ${dbName}`)
-    const quotesCollection = db.collection('quotes')
+let Topic = require('./models/topic.model');
 
-// app.use(cors())
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(cors());
+app.use(bodyParser.json());
 
-app.use(express.static('public'))
+mongoose.connect('mongodb://127.0.0.1:27017/yelp_database', { useNewUrlParser: true });
+const connection = mongoose.connection;
+
+connection.once('open', function() {
+    console.log("MongoDB database connection established successfully");
+})
+
+topicRoutes.route('/').get(function(req, res) {
+    Topic.find(function(err, topics) {
+        if(err){ 
+            console.log(err);
+         }
+         else{
+             res.json(topics);
+         }
+     });
+ });
+
+app.use('/topics', topicRoutes) //It works as a middleware. It will take care of api requests and paths.
 
 app.listen(4000, function(){
     console.log("Listening on 4000")
 })
-
-// All handlers here
-app.get('/', (req, res) => {
-    res.send('Backend Home') //(__dirname + '/index.js')
-})
-
-// app.post('/businesses', (req, res) => {
-//     quotesCollection.insertOne(req.body)
-//     .then(result => {
-//         res.redirect('/')
-//     })
-//     .catch(error=> console.error(error))
-//   })
-// })
-// .catch(console.error)
