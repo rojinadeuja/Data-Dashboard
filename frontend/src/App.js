@@ -12,8 +12,8 @@ class App extends React.Component{
   render(){
     return(
       <Router>
-        <div className="container">
-          <a class="navbar-brand" href="https://www.yelp.com/">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="https://www.yelp.com/">
             <img src={logo} width="400" height="200" alt="Yelp.com"/>
           </a>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
