@@ -1,6 +1,5 @@
 import WordCloud from 'react-d3-cloud';
 import React, { Component } from 'react';
-// import {Link} from 'react-router-dom';
 import axios from 'axios';
 
 function getRandomArbitrary(min, max) {
@@ -16,50 +15,48 @@ function getRandomRotation() {
 const fontSizeMapper = word => word.value / 5;
 const rotate = word => (getRandomRotation());
 var newData;
-
-// const Topic = props => ( 
-//     <tr>
-//         <td>{props.topic.topic}</td>
-//     </tr>
-// )
-
 class D3WordCloud extends React.Component{
     constructor(props){
     super(props);
     this.state = {
         topics: [],
-        loading: true
+        loading: true,
+        showtext: '',
       };
+    this.onWordClicked = this.onWordClicked.bind(this);
     }
     componentDidMount(){
       console.log("Component mounted")
       axios.get('http://localhost:4000/topics').then(response => {
-          console.log("RESPONSE RECEIVED!!")
           console.log("This is the index", this.props.topic_index)
           this.setState({ topics: [response.data] });
           console.log("The data returned is", this.state.topics);
           const value = this.state.topics[0][this.props.topic_index].details;
-          console.log("The first value is", value);
           newData = value.map(item => ({
             text: item.word,
+            freq: item.frequency,
             value: getRandomArbitrary(200,80)
           }));
           console.log("Newer Data is", newData);
           this.setState({loading: false})
-          this.createChart()
       })
       .catch(function(error){
           console.log(error);
       })
     }
+    onWordClicked(word){
+      this.setState({showtext: "Word Selected: "+word.text+" |  Frequency: "+word.freq})
+      console.log("Word MouseOver!!!", word.freq)
+    }     
     render(){
         if(this.state.loading){
           return 'Loading...'
         }
         return(
-             <div style={{border: "solid", borderRadius: "20px", borderColor: "#F7F7F7"}}>
-              <p style={{fontSize: "20px"}} className="text-secondary bg-light">Topic {this.props.topic_index} [{this.state.topics[0][this.props.topic_index].topic}]</p>
-             <WordCloud
+             <div style={{border: "solid", borderRadius: "20px", borderColor: "#F7F7F7" }}>
+              <p style={{fontSize: "20px" }} className="text-secondary bg-light" >Topic {this.props.topic_index} [{this.state.topics[0][this.props.topic_index].topic}]</p>
+              <p style={{fontSize: "15px"}} className="text-secondary text-black-50">{this.state.showtext}</p>
+              <WordCloud 
                 width={330}
                 height={305}
                 data={newData}
@@ -67,9 +64,9 @@ class D3WordCloud extends React.Component{
                 rotate={rotate}
                 random={0}
                 padding={2}
-                //onWordClick
-    />
+                onWordClick = {this.onWordClicked}/>
              </div>
+             
         )
     }
 }

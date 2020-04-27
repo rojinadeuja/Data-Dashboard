@@ -17,22 +17,22 @@ class App extends React.Component{
             <img src={logo} width="400" height="200" alt="Yelp.com"/>
           </a>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          {/* <Link to="/" className="nav-link">Yelp Data Dashboard</Link> */}
+          <Link to="/" className="nav-link">Yelp Data Dashboard</Link>
             <div className="collpase navbar-collapse">
             <ul className= "navbar-nav mr-auto">
               <li className="navbar-item">
                 <Link to="/" className="nav-link">Yelp Data Dashboard</Link>
               </li>
-              <li className="navbar-item">
+              {/* <li className="navbar-item">
                 <Link to="/businesses" className="nav-link">Businesses</Link>
-              </li>
+              </li> */}
             </ul>
             </div>
           </nav>
           <br/>
           {/* Add Routes Here */}
           <Route path="/" exact component={Dashboard}/>
-          <Route path="/businesses" exact component={Business}/>
+          {/* <Route path="/businesses" exact component={Business}/> */}
         </div>
       </Router>
     )
