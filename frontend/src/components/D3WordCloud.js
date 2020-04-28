@@ -14,7 +14,7 @@ function getRandomRotation() {
 
 const fontSizeMapper = word => word.value / 5;
 const rotate = word => (getRandomRotation());
-var newData;
+var value;
 class D3WordCloud extends React.Component{
     constructor(props){
     super(props);
@@ -22,27 +22,33 @@ class D3WordCloud extends React.Component{
         topics: [],
         loading: true,
         showtext: '',
+        newData: ''
       };
     this.onWordClicked = this.onWordClicked.bind(this);
+    this.getData = this.getData.bind(this);
     }
     componentDidMount(){
       console.log("Component mounted")
       axios.get('http://localhost:4000/topics').then(response => {
           console.log("This is the index", this.props.topic_index)
-          this.setState({ topics: [response.data] });
-          console.log("The data returned is", this.state.topics);
-          const value = this.state.topics[0][this.props.topic_index].details;
-          newData = value.map(item => ({
-            text: item.word,
-            freq: item.frequency,
-            value: getRandomArbitrary(200,80)
-          }));
-          console.log("Newer Data is", newData);
+            this.setState({ topics: [response.data] });
+            console.log("The data returned is", this.state.topics);
+            value = this.state.topics[0][this.props.topic_index].details;
+          this.getData()
+          // console.log("Newer Data is", newData);
           this.setState({loading: false})
       })
       .catch(function(error){
           console.log(error);
       })
+    }
+    getData(){
+      this.setState({newData : value.map(item => ({
+        text: item.word,
+        freq: item.frequency,
+        value: getRandomArbitrary(200,80)
+      }))});
+      console.log('NEW DATA IS', this.state.newData)
     }
     onWordClicked(word){
       this.setState({showtext: "Word Selected: "+word.text+" |  Frequency: "+word.freq})
@@ -59,7 +65,7 @@ class D3WordCloud extends React.Component{
               <WordCloud 
                 width={330}
                 height={305}
-                data={newData}
+                data={this.state.newData}
                 fontSizeMapper={fontSizeMapper}
                 rotate={rotate}
                 random={0}
