@@ -11,7 +11,7 @@ The dashboard showcases the results from the data analysis on [Yelp Data Modelin
 
 ####  How to run:
 1. Make sure MongoDB is installed and running on your system 
-2. Extract the database from the moongodump or run the required scripts provided at:
+2. Extract the database from the moongodump [https://unl.app.box.com/folder/111763852404] or run the required scripts provided at:
 2. Clone this repository
 3. Open command line in the cloned folder,
    - **To install dependencies:**
