@@ -15,8 +15,8 @@ The dashboard showcases the results from the data analysis on [Yelp Data Modelin
 2. Clone this repository
 3. Open command line in the cloned folder,
    - **To install dependencies:**
-   <br/> go to ./frontend/ then run ```  npm install  ``` or ``` yarn ```
-   <br/> go to ./backend/ then run ```  npm install  ``` or ``` yarn ```
+   <br/> go to ./frontend/ then run ```  npm install 
+   <br/> go to ./backend/ then run ```  npm install 
    - **To run the application for development:**
    <br/> To run the server: backend/ npm run dev
    <br/> To run the web application : frontend/ npm start
