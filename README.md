@@ -4,9 +4,9 @@ The dashboard showcases the results from the data analysis on [Yelp Data Modelin
 
 
 #### What you need:
-1. Node (13.12.0)
-2. NPM (6.14.4) or Yarn (1.22.4)
-3. MongoDB (4.2.0)
+1. Node (12.14.1)
+2. NPM (6.13.6) or Yarn (1.22.4)
+3. MongoDB (4.2.3)
 
 ####  How to run:
 1. Make sure MongoDB is installed and running on your system 
