@@ -21,9 +21,9 @@ The dashboard showcases the results from the data analysis on [Yelp Data Modelin
    - To run the server: backend/ npm run dev
    - To run the web application : frontend/ npm start
 4. Open [localhost:3000](http://localhost:3000/) in the browser
----- 
-----
+ 
+
 Author: Rojina Deuja
 Last Update: 04-28-2020
----
+
 
