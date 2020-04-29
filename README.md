@@ -14,12 +14,11 @@ A simple social media application with users, posts, likes and comments - develo
 2. Extract the database from the moongodump or run the required scripts provided at:
 2. Clone this repository
 3. Open command line in the cloned folder,
-   - To install dependencies, run ```  npm install  ``` or ``` yarn ```
+   - ### To install dependencies, run ```  npm install  ``` or ``` yarn ```
    - Additional dependencies:
-   - Backend: npm install express body-parser cors mongoose; npm install -g nodemon
-
-   - Frontend: npm install react axios d3 react-d3-cloud
-   - To run the application for development:
+   Backend: npm install express body-parser cors mongoose; npm install -g nodemon
+   Frontend: npm install react axios d3 react-d3-cloud
+   - ### To run the application for development:
    - To run the server: backend/ npm run dev
    - To run the web application : frontend/ npm start
 4. Open [localhost:3000](http://localhost:3000/) in the browser
