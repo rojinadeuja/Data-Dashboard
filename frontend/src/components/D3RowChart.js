@@ -1,6 +1,14 @@
+/*************************************************
+** {A React Component that creates a Row Chart for the Topic Coherence using D3.js}
+**************************************************
+** Author: {Rojina Deuja}
+** Last Updated: {04-28-2020}
+*************************************************/
+
 import React from 'react';
 import * as d3 from 'd3';
 import axios from 'axios';
+
 var value;
 class D3RowChart extends React.Component {
     constructor(props) {
@@ -13,33 +21,38 @@ class D3RowChart extends React.Component {
                 xAxisAttribute: "freq", 
                 width: 1000, // Width of the chart
                 height: 400, // Height of the chart
-                loading: true,
+                loading: true
         }
         this.getData = this.getData.bind(this);
         this.chartRef = React.createRef(); // Create a ref, that gives us access to the respective DOM element
         this.drawChart = this.drawChart.bind(this); // Bind the method to the constructor
     }
     componentDidMount(){
-        console.log("Component mounted")
+            /* Function is called after component gets mounted on the DOM */
+        console.log("Component has mounted sucessfully!")
+        // Get topic data from the server
         axios.get('http://localhost:4000/topics').then(response => {
-            console.log("This is the index", this.props.topic_index)
-              this.setState({ topics: [response.data] });
-              console.log("The data returned is", this.state.topics);
-              value = this.state.topics[0][this.props.topic_index].details;
-            this.getData()
-            this.drawChart(); // Call drawChart() method
-            this.setState({loading: false});
+                console.log("This is the index", this.props.topic_index)
+                this.setState({ topics: [response.data] });
+                console.log("The data returned is", this.state.topics);
+                value = this.state.topics[0];
+                // Put the data into a state variable
+                this.getData();
+                // Call drawChart method to show chart
+                this.drawChart(); 
+                // Show Chart
+                this.setState({loading: false});
         })
         .catch(function(error){
             console.log(error);
         })
       }
-        getData(){
+      getData(){
+              /* Function sets the data from the server into a state variable */
         this.setState({newData : value.map(item => ({
-          text: item.word,
-          freq: item.probability
+          text: item.topic,
+          freq: item.coherence * (-1)
         }))});
-        console.log('NEW DATA IS', this.state.newData)
       }
     componentDidUpdate() {
             /* Function is called everytime the DOM is updated */
@@ -62,7 +75,7 @@ class D3RowChart extends React.Component {
 
         // Add X axis
         let x = d3.scaleLinear()
-                .domain([0, 0.01])
+                .domain([0, 4])
                 .range([ 0, width]);
 
         svg.append("g")
@@ -83,6 +96,7 @@ class D3RowChart extends React.Component {
                 .call(d3.axisLeft(y))
                 .selectAll("text")
                 .attr("dy", null)
+
         // Add Bars
         svg.selectAll("myRect")
                 .data(this.state.newData)
@@ -106,7 +120,7 @@ class D3RowChart extends React.Component {
                 if(this.state.loading){
                         return 'Loading...'
                       }
-            return <div class='rowChart' ref={this.chartRef}></div>; // Render the rowChart class along with the ref
-            }
+                return (<div class='rowChart' ref={this.chartRef}/>) // Render the rowChart class along with the ref
+                }
 }
 export default D3RowChart

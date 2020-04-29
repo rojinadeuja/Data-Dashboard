@@ -1,3 +1,10 @@
+/*************************************************
+** {A React Component that renders the Topic Modeling Dashboard}
+**************************************************
+** Author: {Rojina Deuja}
+** Last Updated: {04-28-2020}
+*************************************************/
+
 import React, { Component } from 'react';
 import D3WordCloud from './D3WordCloud';
 
