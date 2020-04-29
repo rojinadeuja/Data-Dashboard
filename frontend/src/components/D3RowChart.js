@@ -75,7 +75,7 @@ class D3RowChart extends React.Component {
 
         // Add X axis
         let x = d3.scaleLinear()
-                .domain([0, 4])
+                .domain([0, 5])
                 .range([ 0, width]);
 
         svg.append("g")
