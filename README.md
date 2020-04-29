@@ -1,8 +1,7 @@
 # Data-Dashboard
-A web application dashboard built for Yelp using ReactJS, Express, Node.js and MongoDB.The dashboard consists of visualiations using D3.js and d3-react-cloud.
+A web application dashboard built for Yelp using ReactJS, Express, Node.js and MongoDB. The dashboard consists of visualiations using D3.js and d3-react-cloud.
 The dashboard showcases the results from the data analysis on [Yelp Data Modeling](https://github.com/rojinadeuja/Yelp_Data_Modelling)
 
-A simple social media application with users, posts, likes and comments - developed using React, Node, Express and MongoDB. 
 
 #### What you need:
 1. Node (13.12.0)
